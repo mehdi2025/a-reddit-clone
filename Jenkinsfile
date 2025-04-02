@@ -50,7 +50,7 @@ pipeline {
                 sh "trivy fs . > trivyfs.txt"
              }
          }
-	 stage("Build & Push Docker Image") {
+	 /*stage("Build & Push Docker Image") {
              steps {
                  script {
                      docker.withRegistry('',DOCKER_PASS) {
@@ -95,7 +95,7 @@ pipeline {
                    "URL: ${env.BUILD_URL}<br/>",
                to: 'ashfaque.s510@gmail.com',                              
                attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
-        }
+        }*/
      }
     
 }
